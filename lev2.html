@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyline Properties</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f4ff, #e6ecff);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(45deg, #5f2c82, #49a09d);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* FILTER BAR */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* MODERN SELECT */
+.filter-bar select {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    background: white;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.filter-bar select:hover {
+    transform: scale(1.05);
+}
+
+.filter-bar select:focus {
+    outline: none;
+    box-shadow: 0 0 8px #6a11cb;
+}
+
+/* BUTTON */
+.filter-bar button {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-bar button:hover {
+    transform: translateY(-3px);
+}
+
+/* MAIN GRID */
+main {
+    padding: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.price {
+    color: #6a11cb;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #5f2c82;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏢 Skyline Properties</h1>
+    <p>Modern Homes for Modern Living</p>
+</header>
+
+<!-- FILTER BAR -->
+<div class="container my-4">
+  <div class="row g-3 justify-content-center">
+
+    <div class="col-md-3">
+      <select class="form-select">
+        <option>💰 All Prices</option>
+        <option>Below 50L</option>
+        <option>50L - 100L</option>
+        <option>150L - 200L</option>
+        <option>250L - 300L</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <select class="form-select">
+        <option>🏠 All BHK</option>
+        <option>2 BHK</option>
+        <option>3 BHK</option>
+        <option>4 BHK</option>
+        <option>5 BHK</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary w-100">🔍 Apply</button>
+    </div>
+ 
+  </div>
+</div>
+<main>
+<div class="cards">
+
+    <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPO3fayo2ycBKmY63jwB1SfXlOanEF91itMw&s" height=500 width=500>
+        <div class="card-content">
+            <h3>Luxury Apartment</h3>
+            <p class="price">₹45L • 2 BHK</p>
+<article class="card" data-price="45" data-bhk="2">
+            <details>
+                <summary>Explore Property</summary>
+                <p>Modern apartment with parking and security.</p>
+            </details>
+        </div>
+    </article>
+
+    <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZoU7ZGbW6fTctBWoHOttVn2JdyRI2hcLVeQ&s" height=500 width=500>
+        <div class="card-content">
+            <h3>Modern Villa</h3>
+            <p class="price">₹75L • 3 BHK</p>
+<article class="card" data-price="75" data-bhk="3">
+            <details>
+                <summary>Explore Property</summary>
+                <p>Spacious villa with garden and premium interiors.</p>
+            </details>
+        </div>
+    </article>
+
+    <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9g6YtGJdvnee_rE_hMm_6TvLHkJ0b0lEO3Q&s" height=500 width=500>
+        <div class="card-content">
+            <h3>Skyline Heights</h3>
+            <p class="price">₹105L • 3 BHK</p>
+<article class="card" data-price="105" data-bhk="3">
+            <details>
+                <summary>Explore Property</summary>
+                <p>High-rise apartment with city view.</p>
+            </details>
+        </div>
+    </article>
+
+<article class="card">
+        <img src="https://t4.ftcdn.net/jpg/14/95/84/57/360_F_1495845725_vx4ziBf2eKa0dQsvTu8o94ySWqmTeehp.jpg" height=500 width=500>
+        <div class="card-content">
+            <h3>Palm Grove Villas</h3>
+            <p class="price">₹15L • 5 BHK</p>
+<article class="card" data-price="15" data-bhk="5">
+            <details>
+                <summary>Explore Property</summary>
+                <p>Luxury villas surrounded by greenery, private parking and spacious interiors.</p>
+            </details>
+        </div>
+    </article>
+
+<article class="card">
+        <img src="https://imagecdn.99acres.com//microsite/wp-content/blogs.dir/6161/files/2024/08/architectural-styles_modern-minimalism-pic-1_pinterest_Youtube.jpg" height=500 width=500>
+        <div class="card-content">
+            <h3>Golden Residency</h3>
+            <p class="price">₹105L • 3 BHK</p>
+<article class="card" data-price="105" data-bhk="3">
+            <details>
+                <summary>Explore Property</summary>
+                <p>Well-designed 2 BHK homes with modern architecture and nearby schools, hospitals, and malls.</p>
+            </details>
+        </div>
+    </article>
+
+<article class="card">
+        <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" height=500 width=500>
+        <div class="card-content">
+            <h3>Crystal Apartments</h3>
+            <p class="price">₹205L • 4 BHK</p>
+<article class="card" data-price="205" data-bhk="4">
+
+            <details>
+                <summary>Explore Property</summary>
+                <p>Premium lifestyle apartments with luxury interiors, clubhouse, and high-end amenities.</p>
+            </details>
+        </div>
+    </article>
+
+<article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQ2jde_4LxF0OTqJNH3-fSgZ5_gMbt4mU5A&s" height=500 width=500>
+        <div class="card-content">
+            <h3>Signature Homes</h3>
+            <p class="price">₹305L • 4 BHK</p>
+<article class="card" data-price="305" data-bhk="4">
+            <details>
+                <summary>Explore Property</summary>
+                <p>clubhouse and high-end amenities.</p>
+            </details>
+        </div>
+    </article>
+<article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIFrEliWOF235-x-VKhoP1tRfeXr5tiLad9Q&s" height=500 width=500>
+        <div class="card-content">
+            <h3>Metro Heights</h3>
+            <p class="price">₹205L • 4 BHK</p>
+<article class="card" data-price="205" data-bhk="4">
+            <details>
+                <summary>Explore Property</summary>
+                <p>private parking and spacious interiors</p>
+            </details>
+        </div>
+    </article>
+<article class="card">
+        <img src="https://i.pinimg.com/564x/6a/47/a7/6a47a782fac174aa285c3ba3bd9391b7.jpg" height=500 width=500>
+        <div class="card-content">
+            <h3>Blue Horizon Homes</h3>
+            <p class="price">₹25L • 4 BHK</p>
+<article class="card" data-price="25" data-bhk="4">
+            <details>
+                <summary>Explore Property</summary>
+                <p>calm and pollution-free environment in located spacious 3 BHK flats with garden view and fresh air.</p>
+            </details>
+        </div>
+    </article>
+<article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr4QChhgZgLi35I3xEgSS8WuQlQV9vKjNhiA&s" height=500 width=500>
+        <div class="card-content">
+            <h3>Lakeview Residency</h3>
+            <p class="price">₹305L • 6 BHK</p>
+<article class="card" data-price="305" data-bhk="6">
+            <details>
+                <summary>Explore Property</summary>
+                <p>Beautiful flats with stunning lake view, calm surroundings and  peaceful living experience</p>
+            </details>
+        </div>
+    </article>
+
+
+
+</div>
+</main>
+
+<footer>
+    <p>© 2026 Skyline Properties</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function applyFilter() {
+  let price = document.getElementById("priceFilter").value;
+  let bhk = document.getElementById("bhkFilter").value;
+
+  document.querySelectorAll(".card").forEach(card => {
+    let p = parseInt(card.dataset.price);
+    let b = parseInt(card.dataset.bhk);
+
+    let show = true;
+
+    if (price === "low" && p >= 50) show = false;
+    if (price === "mid" && (p < 50 || p > 100)) show = false;
+    if (price === "high" && p < 150) show = false;
+
+    if (bhk !== "all") {
+      if (bhk === "5" && b < 5) show = false;
+      else if (bhk !== "5" && b != bhk) show = false;
+    }
+
+    card.style.display = show ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
